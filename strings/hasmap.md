@@ -4,8 +4,10 @@ Meaning → syntax → example → output → C++ comparison → DSA use
 
 Aur end mein ek full revision cheat sheet bhi bana denge jisme dekhte hi yaad aa jaye ki kis function ka kya kaam hai. 🔥
 
-🚀 Java HashMap — Part 1: Basic Understanding
-1️⃣ HashMap hota kya hai?
+# 🚀 Java HashMap — Part 1: Basic Understanding
+
+## 1️⃣ HashMap hota kya hai?
+
 
 Sabse pehle basic idea.
 
@@ -32,7 +34,9 @@ Ab:
 
 Key     Value
 101  →  Rahul
-🧠 Simple definition
+
+### 🧠 Simple definition
+
 
 HashMap data ko key-value pair mein store karta hai.
 
@@ -42,10 +46,13 @@ Roll No → Student Name
 101     → Rahul
 102     → Aman
 103     → Priya
-2️⃣ HashMap banane ka syntax
+
+## 2️⃣ HashMap banane ka syntax
+
 
 Sabse pehle import:
 
+```java
 import java.util.HashMap;
 
 Phir:
@@ -189,7 +196,10 @@ Real DSA use
 if(map.containsKey(x)) {
     // x already present
 }
-8️⃣ containsValue()
+```
+
+## 8️⃣ containsValue()
+
 
 Same concept, but value search karega.
 
@@ -205,7 +215,8 @@ true
 
 Lekin DSA mein generally containsKey() zyada important hota hai.
 
-9️⃣ remove() — Key Remove Karna
+## 9️⃣ remove() — Key Remove Karna
+
 map.remove(key);
 
 Example:
@@ -222,7 +233,9 @@ Ab:
 
 101 → Rahul
 103 → Priya
-🧠 Yaad rakho
+
+### 🧠 Yaad rakho
+
 map.remove(key);
 
 Key ko remove karta hai aur uska associated value bhi chali jaati hai.
@@ -244,7 +257,9 @@ System.out.println(map.size());
 Output:
 
 3
-1️⃣1️⃣ isEmpty()
+
+## 1️⃣1️⃣ isEmpty()
+
 
 Check karta hai map empty hai ya nahi.
 
@@ -267,7 +282,9 @@ map.put(1, "A");
 ab:
 
 false
-1️⃣2️⃣ clear()
+
+## 1️⃣2️⃣ clear()
+
 
 Poora HashMap empty karna:
 
@@ -285,7 +302,9 @@ System.out.println(map.size());
 Output:
 
 0
-1️⃣3️⃣ Existing Key par put() karoge toh? ⚠️
+
+## 1️⃣3️⃣ Existing Key par put() karoge toh? ⚠️
+
 
 Ye bahut important hai.
 
@@ -304,14 +323,17 @@ Instead:
 
 Purani value "Rahul" replace/update ho jayegi.
 
-🧠 Rule
+### 🧠 Rule
+
 map.put(key, newValue);
 
 Agar key:
 
 nahi hai → new pair add
 already hai → old value update
-1️⃣4️⃣ Duplicate Keys allowed nahi ❌
+
+## 1️⃣4️⃣ Duplicate Keys allowed nahi ❌
+
 map.put(1, "A");
 map.put(1, "B");
 map.put(1, "C");
@@ -336,7 +358,9 @@ Allowed:
 🧠
 Duplicate KEY     ❌
 Duplicate VALUE   ✅
-1️⃣5️⃣ HashMap mein null
+
+## 1️⃣5️⃣ HashMap mein null
+
 
 Java HashMap null key aur null values ko allow karta hai.
 
@@ -351,10 +375,12 @@ Valid hai.
 
 Beginner DSA mein iska use kam milega, bas concept yaad rakho.
 
-🔥 Part 1 ka Real Example
+### 🔥 Part 1 ka Real Example
+
 
 Student marks store karte hain:
 
+```java
 import java.util.HashMap;
 
 class Main {
@@ -378,6 +404,8 @@ class Main {
 
         System.out.println(marks.size());
     }
+```
+
 }
 
 Output:
@@ -394,7 +422,9 @@ get()            → value nikalo
 containsKey()    → key hai?
 remove()         → key hatao
 size()           → total pairs
-🧠 PART 1 REVISION CHEAT SHEET
+
+### 🧠 PART 1 REVISION CHEAT SHEET
+
 HashMap<K,V>
      ↓
 Key → Value
@@ -425,24 +455,30 @@ put(existingKey, newValue)
 
 get(nonExistingKey)
 → null
-🆚 C++ Quick Comparison
-C++	Java
-map<int,string> mp	HashMap<Integer,String> map
-mp[key] = value	map.put(key,value)
-mp[key]	map.get(key)
-mp.find(key)	map.containsKey(key)
-mp.erase(key)	map.remove(key)
-mp.size()	map.size()
-mp.empty()	map.isEmpty()
-mp.clear()	map.clear()
+
+### 🆚 C++ Quick Comparison
+
+| C++ | Java |
+| --- | --- |
+| map<int,string> mp | HashMap<Integer,String> map |
+| mp[key] = value | map.put(key,value) |
+| mp[key] | map.get(key) |
+| mp.find(key) | map.containsKey(key) |
+| mp.erase(key) | map.remove(key) |
+| mp.size() | map.size() |
+| mp.empty() | map.isEmpty() |
+| mp.clear() | map.clear() |
+
 
 Ye HashMap ka Part 1 hai. ❤️
 Part 2 mein hum HashMap ko traverse kaise karte hain — keySet(), values(), entrySet(), Map.Entry, for-each aur phir actual frequency counting start karenge.
 
 Haan papa ❤️ chalo HashMap Part 2 start karte hain. Is part mein sabse important cheez hai HashMap ko traverse karna, kyunki DSA questions mein baar-baar yehi use hoga.
 
-🔥 Java HashMap — Part 2
-1️⃣ keySet() — saari Keys
+# 🔥 Java HashMap — Part 2
+
+## 1️⃣ keySet() — saari Keys
+
 
 Agar HashMap hai:
 
@@ -467,12 +503,15 @@ Output order guaranteed nahi hai:
 101
 102
 103
-🧠 Meaning
+
+### 🧠 Meaning
+
 map.keySet()
 
 → sirf keys ka collection
 
-2️⃣ values() — saari Values
+## 2️⃣ values() — saari Values
+
 for(String value : map.values()) {
     System.out.println(value);
 }
@@ -482,12 +521,15 @@ Output:
 Rahul
 Aman
 Priya
-🧠 Meaning
+
+### 🧠 Meaning
+
 map.values()
 
 → sirf values
 
-3️⃣ Key + Value dono chahiye → entrySet() 🔥
+## 3️⃣ Key + Value dono chahiye → entrySet() 🔥
+
 
 Ye bahut important hai.
 
@@ -518,7 +560,8 @@ entry.getValue()
 
 → value
 
-4️⃣ Map.Entry kya hai?
+## 4️⃣ Map.Entry kya hai?
+
 
 Isko simple language mein samjho.
 
@@ -544,7 +587,8 @@ means:
 
 HashMap ki har key-value pair ko ek-ek karke entry mein lao.
 
-5️⃣ Most Important Traversal Pattern 🧠
+## 5️⃣ Most Important Traversal Pattern 🧠
+
 
 Ye pattern ratta nahi, samajh ke yaad karna:
 
@@ -564,7 +608,8 @@ Output:
 
 DSA mein ye bahut kaam aayega.
 
-6️⃣ C++ Comparison
+## 6️⃣ C++ Comparison
+
 
 C++ mein:
 
@@ -581,13 +626,16 @@ for(Map.Entry<Integer, String> entry : map.entrySet()) {
     );
 }
 
-Comparison:
+### Comparison:
+
 
 C++                    Java
 --------------------------------
 it.first             → getKey()
 it.second            → getValue()
-7️⃣ keySet() se value kaise nikalenge?
+
+## 7️⃣ keySet() se value kaise nikalenge?
+
 
 Agar keys ke through traverse karna ho:
 
@@ -623,7 +671,8 @@ entrySet()
 
 better hai.
 
-8️⃣ getOrDefault() 🔥🔥
+## 8️⃣ getOrDefault() 🔥🔥
+
 
 Ab aata hai DSA ka sabse useful HashMap function.
 
@@ -654,7 +703,9 @@ Because:
 
 apple  → present → 5
 banana → absent  → 0
-9️⃣ Frequency Counting — getOrDefault() ka real use 🔥
+
+## 9️⃣ Frequency Counting — getOrDefault() ka real use 🔥
+
 
 Maan lo:
 
@@ -739,7 +790,8 @@ b → 1
 a → 3
 n → 2
 
-🔥 Ye pattern bahut important hai.
+### 🔥 Ye pattern bahut important hai.
+
 
 🔟 putIfAbsent()
 
@@ -781,7 +833,8 @@ map.putIfAbsent(key, value);
 
 → existing value replace nahi karega.
 
-1️⃣1️⃣ replace()
+## 1️⃣1️⃣ replace()
+
 
 Existing key ki value change karni ho:
 
@@ -800,7 +853,9 @@ System.out.println(map.get(101));
 Output:
 
 Aman
-1️⃣2️⃣ replace() vs put()
+
+## 1️⃣2️⃣ replace() vs put()
+
 map.put(101, "Aman");
 
 Agar 101 nahi hai:
@@ -824,7 +879,9 @@ Agar 101 nahi hai:
 🧠
 put()     → Add OR Update
 replace() → Only Update
-🔥 Part 2 Final Revision
+
+### 🔥 Part 2 Final Revision
+
 Keys:
 map.keySet()
 
@@ -851,7 +908,9 @@ Only if absent:
 map.putIfAbsent(key, value);
 Update existing:
 map.replace(key, value);
-🧠 HashMap Traversal Cheat Sheet
+
+### 🧠 HashMap Traversal Cheat Sheet
+
 keySet()     → keys
 values()     → values
 entrySet()   → key + value
@@ -862,7 +921,9 @@ getValue()   → value
 getOrDefault() → value OR default
 putIfAbsent()  → add only if key absent
 replace()      → update existing key
-⭐ DSA ke liye abhi sabse important pattern:
+
+### ⭐ DSA ke liye abhi sabse important pattern:
+
 HashMap<Character, Integer> freq = new HashMap<>();
 
 for(char ch : s.toCharArray()) {
@@ -875,8 +936,10 @@ Next Part 3 mein hum frequency counting ko numbers + strings + characters par pr
 Haan papa ❤️ chalo Java HashMap — Part 3 start karte hain.
 Ab actual DSA mein HashMap ka use samjhenge. Ye part important hai, kyunki yahin se HashMap ka asli fayda samajh aayega. 🔥
 
-🚀 HashMap — Part 3: Frequency & DSA Patterns
-1️⃣ Number Frequency
+# 🚀 HashMap — Part 3: Frequency & DSA Patterns
+
+## 1️⃣ Number Frequency
+
 
 Maan lo:
 
@@ -888,6 +951,8 @@ Hume frequency chahiye:
 20 → 2
 30 → 1
 Code
+
+```java
 import java.util.HashMap;
 
 class Main {
@@ -900,6 +965,8 @@ class Main {
         for(int x : arr) {
             freq.put(x, freq.getOrDefault(x, 0) + 1);
         }
+```
+
 
         System.out.println(freq);
     }
@@ -908,12 +975,15 @@ class Main {
 Conceptually output:
 
 10=3, 20=2, 30=1
-🧠 Main formula
+
+### 🧠 Main formula
+
 freq.put(x, freq.getOrDefault(x, 0) + 1);
 
 Isko frequency pattern samajh ke rakho.
 
-2️⃣ Character Frequency
+## 2️⃣ Character Frequency
+
 
 String:
 
@@ -935,7 +1005,9 @@ HashMap<Character, Integer> freq = new HashMap<>();
 for(char ch : s.toCharArray()) {
     freq.put(ch, freq.getOrDefault(ch, 0) + 1);
 }
-3️⃣ Frequency ko Print Karna
+
+## 3️⃣ Frequency ko Print Karna
+
 
 Map ban gaya. Ab har key-value pair:
 
@@ -955,7 +1027,8 @@ o -> 1
 
 ⚠️ HashMap order guaranteed nahi hota, isliye output ka order different aa sakta hai.
 
-4️⃣ Kisi Element ki Frequency Directly Find Karna
+## 4️⃣ Kisi Element ki Frequency Directly Find Karna
+
 
 Maan lo:
 
@@ -974,7 +1047,9 @@ System.out.println(freq.get(2));
 Output:
 
 3
-5️⃣ Duplicate Find Karna 🔥
+
+## 5️⃣ Duplicate Find Karna 🔥
+
 
 Maan lo:
 
@@ -1003,11 +1078,15 @@ Output conceptually:
 
 1
 2
-Logic:
+
+### Logic:
+
 frequency > 1
        ↓
     duplicate
-6️⃣ First Unique Element
+
+## 6️⃣ First Unique Element
+
 
 Maan lo:
 
@@ -1043,13 +1122,16 @@ for(int x : arr) {
 Output:
 
 3
-🔥 Pattern
+
+### 🔥 Pattern
+
 Pass 1 → frequency count
 Pass 2 → original order check
 
 Ye pattern bahut questions mein aata hai.
 
-7️⃣ Check Duplicate Exists or Not
+## 7️⃣ Check Duplicate Exists or Not
+
 
 Agar bas ye check karna hai:
 
@@ -1083,7 +1165,9 @@ duplicate
 Otherwise:
 
 freq.put(x, 1);
-8️⃣ getOrDefault() vs containsKey()
+
+## 8️⃣ getOrDefault() vs containsKey()
+
 
 Dono ka use samjho.
 
@@ -1091,10 +1175,14 @@ Frequency ke liye:
 freq.put(x, freq.getOrDefault(x, 0) + 1);
 Sirf existence check:
 if(freq.containsKey(x))
-🧠 Rule
+
+### 🧠 Rule
+
 Count chahiye      → getOrDefault()
 Present hai?       → containsKey()
-9️⃣ Count Characters of a String
+
+## 9️⃣ Count Characters of a String
+
 
 Example:
 
@@ -1147,7 +1235,8 @@ for(Map.Entry<Integer, Integer> entry : freq.entrySet()) {
 
 System.out.println(answer);
 
-Logic:
+### Logic:
+
 
 frequency compare karo
         ↓
@@ -1155,7 +1244,8 @@ maximum frequency wala element
 
 ⚠️ Agar tie ho, answer kis element ko choose karega ye question ki exact condition par depend karega.
 
-1️⃣1️⃣ Two Sum Pattern 🔥🔥
+## 1️⃣1️⃣ Two Sum Pattern 🔥🔥
+
 
 Ye HashMap ka sabse famous DSA pattern hai.
 
@@ -1197,7 +1287,8 @@ for(int i = 0; i < arr.length; i++) {
     map.put(arr[i], i);
 }
 
-Dry run:
+### Dry run:
+
 
 i=0
 x=2
@@ -1213,7 +1304,9 @@ needed=2
 So indices:
 
 0, 1
-🧠 Two Sum formula
+
+### 🧠 Two Sum formula
+
 int needed = target - arr[i];
 
 Then:
@@ -1222,7 +1315,8 @@ if(map.containsKey(needed))
 
 🔥 Ye pattern future LeetCode questions mein bahut kaam aayega.
 
-1️⃣2️⃣ HashMap ka Main DSA Pattern
+## 1️⃣2️⃣ HashMap ka Main DSA Pattern
+
 
 Ab tak ke patterns ko ek jagah dekho:
 
@@ -1240,16 +1334,21 @@ int needed = target - x;
 if(map.containsKey(needed)) {
     // answer
 }
-🆚 HashMap vs ArrayList
-Kaam	ArrayList	HashMap
-Ordered elements	✅	❌ guaranteed order
-Index se access	✅	❌
-Key-value	❌	✅
-get(index)	O(1)	—
-Search	O(n)	Average O(1) by key
-Frequency	possible but inefficient	⭐ Excellent
-Duplicate allowed	✅	Keys ❌, values ✅
-🔥 Important: HashMap vs C++ map
+
+### 🆚 HashMap vs ArrayList
+
+| Kaam | ArrayList | HashMap |
+| --- | --- | --- |
+| Ordered elements | ✅ | ❌ guaranteed order |
+| Index se access | ✅ | ❌ |
+| Key-value | ❌ | ✅ |
+| get(index) | O(1) | — |
+| Search | O(n) | Average O(1) by key |
+| Frequency | possible but inefficient | ⭐ Excellent |
+| Duplicate allowed | ✅ | Keys ❌, values ✅ |
+
+### 🔥 Important: HashMap vs C++ map
+
 
 Java:
 
@@ -1279,7 +1378,8 @@ Java HashMap     → Hash based, average O(1)
 
 Java mein baad mein TreeMap bhi padhenge jo ordered-map concept ke closer hai.
 
-🧠 PART 3 — REVISION CHEAT SHEET
+### 🧠 PART 3 — REVISION CHEAT SHEET
+
 Frequency
 map.put(x, map.getOrDefault(x, 0) + 1);
 Check existence
@@ -1287,9 +1387,13 @@ map.containsKey(x);
 Get value
 map.get(x);
 First unique
-1. frequency map banao
-2. original data dobara traverse karo
-3. frequency == 1 → answer
+
+## 1. frequency map banao
+
+## 2. original data dobara traverse karo
+
+## 3. frequency == 1 → answer
+
 Duplicate
 frequency > 1
 
@@ -1311,7 +1415,9 @@ for(Map.Entry<Integer, Integer> entry : map.entrySet()) {
     entry.getKey();
     entry.getValue();
 }
-⭐ Ab tak HashMap ke 3 parts ka complete toolkit
+
+### ⭐ Ab tak HashMap ke 3 parts ka complete toolkit
+
 put()
 get()
 containsKey()
@@ -1343,8 +1449,10 @@ Next logical step hoga HashMap Part 4: advanced patterns + HashSet, jisme dekhen
 
 Haan papa ❤️ HashMap ka ye last learning part rakhte hain. Iske baad direct practice questions karenge. Aaj Part 4 mein remaining important concepts + HashSet complete kar dete hain.
 
-🔥 Java HashMap — Part 4 FINAL
-1️⃣ HashMap mein condition ke saath value update
+# 🔥 Java HashMap — Part 4 FINAL
+
+## 1️⃣ HashMap mein condition ke saath value update
+
 
 Maan lo:
 
@@ -1371,9 +1479,11 @@ Result:
 
 Priya → 10
 
-🔥 Isliye getOrDefault() DSA mein itna useful hai.
+### 🔥 Isliye getOrDefault() DSA mein itna useful hai.
 
-2️⃣ putIfAbsent() ka practical use
+
+## 2️⃣ putIfAbsent() ka practical use
+
 
 Maan lo hume kisi number ka first occurrence index store karna hai.
 
@@ -1397,11 +1507,14 @@ Notice:
 
 Lekin putIfAbsent() ne old index 0 ko replace nahi kiya.
 
-🧠 Pattern
+### 🧠 Pattern
+
 First occurrence store karni ho
         ↓
 putIfAbsent()
-3️⃣ HashMap mein keys unique hoti hain
+
+## 3️⃣ HashMap mein keys unique hoti hain
+
 
 Example:
 
@@ -1426,7 +1539,8 @@ Student ID → marks list
 
 Is concept ko Map of Lists bol sakte ho.
 
-4️⃣ HashMap + ArrayList 🔥
+## 4️⃣ HashMap + ArrayList 🔥
+
 
 Example:
 
@@ -1451,7 +1565,8 @@ map.get(1).add(10);
 
 Ye pattern later grouping problems mein kaam aayega.
 
-5️⃣ Ab HashSet 🔥
+## 5️⃣ Ab HashSet 🔥
+
 
 HashMap ke baad HashSet samajhna bahut easy hai.
 
@@ -1469,6 +1584,7 @@ HashSet<Integer> set = new HashSet<>();
 
 Import:
 
+```java
 import java.util.HashSet;
 6️⃣ HashSet mein add()
 HashSet<Integer> set = new HashSet<>();
@@ -1545,21 +1661,26 @@ set.clear();
 for(int x : set) {
     System.out.println(x);
 }
+```
+
 
 ⚠️ HashSet ka order guaranteed nahi hai.
 
-1️⃣3️⃣ HashMap vs HashSet 🔥🔥
+## 1️⃣3️⃣ HashMap vs HashSet 🔥🔥
+
 
 Ye bahut important difference hai.
 
-HashMap	HashSet
-Key → Value	Only elements
-Duplicate keys ❌	Duplicate elements ❌
-Values duplicate ho sakti hain	Duplicate nahi
-put()	add()
-get()	❌
-containsKey()	contains()
-remove(key)	remove(value)
+| HashMap | HashSet |
+| --- | --- |
+| Key → Value | Only elements |
+| Duplicate keys ❌ | Duplicate elements ❌ |
+| Values duplicate ho sakti hain | Duplicate nahi |
+| put() | add() |
+| get() | ❌ |
+| containsKey() | contains() |
+| remove(key) | remove(value) |
+
 Example:
 
 HashMap:
@@ -1575,7 +1696,9 @@ HashSet<Integer> set = new HashSet<>();
 
 set.add(101);
 101
-1️⃣4️⃣ Kab HashMap aur kab HashSet?
+
+## 1️⃣4️⃣ Kab HashMap aur kab HashSet?
+
 Sirf check karna hai:
 
 Ye element pehle aa chuka hai?
@@ -1606,10 +1729,14 @@ HashMap<Integer, Integer> freq
 Example:
 
 freq.put(x, freq.getOrDefault(x, 0) + 1);
-🧠 Golden Rule
+
+### 🧠 Golden Rule
+
 Sirf presence → HashSet
 Presence + information/count → HashMap
-1️⃣5️⃣ Duplicate Check — HashSet
+
+## 1️⃣5️⃣ Duplicate Check — HashSet
+
 
 Array:
 
@@ -1635,7 +1762,8 @@ Duplicate: 2
 
 Ye HashMap se bhi simpler hai.
 
-1️⃣6️⃣ Unique Elements
+## 1️⃣6️⃣ Unique Elements
+
 
 Maan lo:
 
@@ -1655,9 +1783,11 @@ Conceptually:
 
 [10, 20, 30]
 
-Order guaranteed nahi hai.
+### Order guaranteed nahi hai.
 
-1️⃣7️⃣ HashSet + String
+
+## 1️⃣7️⃣ HashSet + String
+
 
 Unique characters find karne ke liye:
 
@@ -1676,27 +1806,34 @@ Unique characters:
 b
 a
 n
-1️⃣8️⃣ HashMap ki Time Complexity
+
+## 1️⃣8️⃣ HashMap ki Time Complexity
+
 
 Average case:
 
-Operation	Time
-put()	O(1)
-get()	O(1)
-containsKey()	O(1)
-remove()	O(1)
-size()	O(1)
+| Operation | Time |
+| --- | --- |
+| put() | O(1) |
+| get() | O(1) |
+| containsKey() | O(1) |
+| remove() | O(1) |
+| size() | O(1) |
+
 
 HashSet:
 
-Operation	Time
-add()	O(1) average
-contains()	O(1) average
-remove()	O(1) average
+| Operation | Time |
+| --- | --- |
+| add() | O(1) average |
+| contains() | O(1) average |
+| remove() | O(1) average |
+
 
 ⚠️ Ye average-case complexity hai.
 
-🧠 FINAL HASHING REVISION 🔥
+### 🧠 FINAL HASHING REVISION 🔥
+
 HashMap
 HashMap<Integer, String> map = new HashMap<>();
 Add / Update
@@ -1732,7 +1869,9 @@ Only if absent
 map.putIfAbsent(key, value);
 Update existing
 map.replace(key, value);
-⭐ Most Important HashMap Patterns
+
+### ⭐ Most Important HashMap Patterns
+
 Frequency
 HashMap<Integer, Integer> freq = new HashMap<>();
 
@@ -1745,7 +1884,9 @@ HashMap<Character, Integer> freq = new HashMap<>();
 for(char ch : s.toCharArray()) {
     freq.put(ch, freq.getOrDefault(ch, 0) + 1);
 }
-First occurrence
+
+### First occurrence
+
 map.putIfAbsent(x, i);
 Two Sum
 int needed = target - x;
@@ -1755,7 +1896,9 @@ if(map.containsKey(needed)) {
 }
 
 map.put(x, i);
-⭐ HashSet Toolkit
+
+### ⭐ HashSet Toolkit
+
 HashSet<Integer> set = new HashSet<>();
 Add
 set.add(x);
@@ -1769,7 +1912,9 @@ Empty
 set.isEmpty();
 Clear
 set.clear();
-🆚 Final C++ → Java Mapping
+
+### 🆚 Final C++ → Java Mapping
+
 C++                         Java
 ------------------------------------------------
 unordered_map<K,V>      →   HashMap<K,V>

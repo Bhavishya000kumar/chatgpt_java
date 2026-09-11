@@ -1,6 +1,7 @@
 Bilkul papa ❤️ Ab Java ArrayList ko ekdum zero se karte hain, aur har important cheez ke saath C++ vector mein kaise karte the woh bhi side-by-side batata jaunga.
 
-🟢 Java ArrayList — Part 1: Basics
+# 🟢 Java ArrayList — Part 1: Basics
+
 
 Sabse pehle ek cheez clear:
 
@@ -25,7 +26,9 @@ C++                     Java
 vector<int>             ArrayList<Integer>
 vector<string>          ArrayList<String>
 vector<char>            ArrayList<Character>
-1️⃣ ArrayList kya hai?
+
+## 1️⃣ ArrayList kya hai?
+
 
 Simple language mein:
 
@@ -64,10 +67,13 @@ list.add(40);
 ho gaya:
 
 10 20 30 40
-2️⃣ ArrayList use karne ke liye import ⭐
+
+## 2️⃣ ArrayList use karne ke liye import ⭐
+
 
 Java mein ArrayList use karne ke liye:
 
+```java
 import java.util.ArrayList;
 
 Example:
@@ -85,12 +91,16 @@ public class Main {
 
         System.out.println(list);
     }
+```
+
 }
 
 Output:
 
 [10, 20, 30]
-3️⃣ ArrayList<Integer> mein Integer kyun? ⚠️
+
+## 3️⃣ ArrayList<Integer> mein Integer kyun? ⚠️
+
 
 Ye bahut important Java concept hai.
 
@@ -125,7 +135,8 @@ boolean   → Boolean
 
 Abhi bas ye mapping yaad rakho.
 
-4️⃣ Empty ArrayList banana
+## 4️⃣ Empty ArrayList banana
+
 Java
 ArrayList<Integer> list = new ArrayList<>();
 
@@ -141,7 +152,8 @@ Initially:
 
 Dono ka idea same hai.
 
-5️⃣ ArrayList mein element add karna ⭐⭐⭐
+## 5️⃣ ArrayList mein element add karna ⭐⭐⭐
+
 Java
 list.add(10);
 list.add(20);
@@ -158,11 +170,15 @@ v.push_back(30);
 Result:
 
 [10, 20, 30]
-Golden comparison 🔥
+
+### Golden comparison 🔥
+
 C++                         Java
 
 push_back(x)                add(x)
-6️⃣ Kisi specific index par add karna
+
+## 6️⃣ Kisi specific index par add karna
+
 
 Suppose:
 
@@ -182,7 +198,9 @@ v.insert(v.begin() + 1, 15);
 Result:
 
 [10, 15, 20, 30]
-Comparison
+
+### Comparison
+
 C++:
 v.insert(v.begin() + index, value);
 
@@ -191,7 +209,8 @@ list.add(index, value);
 
 Java wala kaafi simple hai. 😄
 
-7️⃣ Element access karna ⭐⭐⭐
+## 7️⃣ Element access karna ⭐⭐⭐
+
 
 Suppose:
 
@@ -207,7 +226,9 @@ Output/value:
 20
 C++
 int x = v[1];
-🔥 Important difference
+
+### 🔥 Important difference
+
 C++ vector:
 v[index]
 
@@ -220,7 +241,8 @@ list[1]   // ❌
 
 nahi chalega.
 
-8️⃣ Element ko change karna
+## 8️⃣ Element ko change karna
+
 
 Suppose:
 
@@ -236,13 +258,17 @@ Result:
 [10, 50, 30]
 C++
 v[1] = 50;
-Comparison ⭐
+
+### Comparison ⭐
+
 C++:
 v[index] = value;
 
 Java:
 list.set(index, value);
-9️⃣ Size nikalna ⭐⭐⭐
+
+## 9️⃣ Size nikalna ⭐⭐⭐
+
 Java
 list.size();
 C++
@@ -261,7 +287,9 @@ System.out.println(list.size());
 Output:
 
 3
-🔥 Important difference: Array vs ArrayList
+
+### 🔥 Important difference: Array vs ArrayList
+
 
 Java mein ye confuse mat karna:
 
@@ -295,14 +323,17 @@ Result:
 C++
 v.erase(v.begin() + 1);
 
-Comparison:
+### Comparison:
+
 
 C++:
 v.erase(v.begin() + index);
 
 Java:
 list.remove(index);
-1️⃣1️⃣ Java ka ek dangerous trap ⚠️🔥
+
+## 1️⃣1️⃣ Java ka ek dangerous trap ⚠️🔥
+
 
 Suppose:
 
@@ -338,7 +369,9 @@ list.remove(Integer.valueOf(10));
 Result:
 
 [20, 30]
-⭐ Golden rule
+
+### ⭐ Golden rule
+
 remove(index)
 
 → index remove
@@ -349,7 +382,8 @@ remove(Integer.valueOf(value))
 
 Ye Java ArrayList ka bahut common interview/LeetCode trap hai.
 
-1️⃣2️⃣ ArrayList print karna
+## 1️⃣2️⃣ ArrayList print karna
+
 
 Simply:
 
@@ -378,8 +412,10 @@ karna padta tha.
 
 Java ArrayList directly readable format mein print kar deta hai.
 
-1️⃣3️⃣ ArrayList traverse karna
-Method 1 — Normal for loop ⭐
+## 1️⃣3️⃣ ArrayList traverse karna
+
+### Method 1 — Normal for loop ⭐
+
 for(int i = 0; i < list.size(); i++) {
     System.out.println(list.get(i));
 }
@@ -389,13 +425,17 @@ C++:
 for(int i = 0; i < v.size(); i++) {
     cout << v[i] << endl;
 }
-Comparison:
+
+### Comparison:
+
 C++:
 v[i]
 
 Java:
 list.get(i)
-1️⃣4️⃣ Enhanced for loop
+
+## 1️⃣4️⃣ Enhanced for loop
+
 
 Java mein:
 
@@ -411,7 +451,8 @@ for(int x : v) {
 
 Concept exactly similar hai.
 
-1️⃣5️⃣ contains() ⭐
+## 1️⃣5️⃣ contains() ⭐
+
 
 Check karna hai ki value present hai ya nahi.
 
@@ -434,7 +475,9 @@ use karte the.
 Java mein kaafi simple:
 
 list.contains(20)
-1️⃣6️⃣ indexOf()
+
+## 1️⃣6️⃣ indexOf()
+
 
 Kisi value ka first index:
 
@@ -456,7 +499,9 @@ find(v.begin(), v.end(), 20) - v.begin()
 Java mein:
 
 list.indexOf(20)
-1️⃣7️⃣ lastIndexOf()
+
+## 1️⃣7️⃣ lastIndexOf()
+
 
 Last occurrence:
 
@@ -465,7 +510,9 @@ System.out.println(list.lastIndexOf(20));
 Output:
 
 3
-1️⃣8️⃣ isEmpty()
+
+## 1️⃣8️⃣ isEmpty()
+
 
 Check karo ArrayList empty hai ya nahi:
 
@@ -476,7 +523,9 @@ C++:
 v.empty()
 Java:
 list.isEmpty()
-1️⃣9️⃣ clear()
+
+## 1️⃣9️⃣ clear()
+
 
 Saare elements remove:
 
@@ -496,21 +545,25 @@ v.clear();
 
 Same concept.
 
-🧠 Aaj ka SUPER IMPORTANT Cheat Sheet
-Kaam	C++ vector	Java ArrayList
-Create	vector<int> v	ArrayList<Integer> list
-Add end	push_back(x)	add(x)
-Add index	insert()	add(index,x)
-Access	v[i]	list.get(i)
-Update	v[i]=x	list.set(i,x)
-Size	v.size()	list.size()
-Remove index	erase()	remove(index)
-Contains	find()	contains()
-First index	find()	indexOf()
-Last index	—	lastIndexOf()
-Empty	empty()	isEmpty()
-Clear	clear()	clear()
-⭐ Sabse important 6
+### 🧠 Aaj ka SUPER IMPORTANT Cheat Sheet
+
+| Kaam | C++ vector | Java ArrayList |
+| --- | --- | --- |
+| Create | vector<int> v | ArrayList<Integer> list |
+| Add end | push_back(x) | add(x) |
+| Add index | insert() | add(index,x) |
+| Access | v[i] | list.get(i) |
+| Update | v[i]=x | list.set(i,x) |
+| Size | v.size() | list.size() |
+| Remove index | erase() | remove(index) |
+| Contains | find() | contains() |
+| First index | find() | indexOf() |
+| Last index | — | lastIndexOf() |
+| Empty | empty() | isEmpty() |
+| Clear | clear() | clear() |
+
+### ⭐ Sabse important 6
+
 list.add(x);
 list.add(index, x);
 
@@ -522,7 +575,9 @@ list.size();
 
 Agar ye 6 properly yaad ho gaye, ArrayList ka basic foundation set hai. 🔥
 
-🧪 Chhota sa complete example
+### 🧪 Chhota sa complete example
+
+```java
 import java.util.ArrayList;
 
 public class Main {
@@ -550,6 +605,8 @@ public class Main {
 
         System.out.println(list.size());
     }
+```
+
 }
 
 Iska flow:
@@ -574,8 +631,10 @@ Next part mein hum ArrayList ke searching + loops + sorting + reverse + max/min 
 
 Bilkul papa ❤️ chalo ArrayList Part 2 start karte hain. Ab hum searching, loops, sorting, reverse, max/min aur frequency karenge — aur har jagah C++ vector se comparison bhi.
 
-🟢 ArrayList — Part 2
-1️⃣ contains() — value present hai ya nahi ⭐
+# 🟢 ArrayList — Part 2
+
+## 1️⃣ contains() — value present hai ya nahi ⭐
+
 Java
 ArrayList<Integer> list = new ArrayList<>();
 
@@ -603,7 +662,9 @@ list.contains(x)
 
 C++:
 find(...)
-2️⃣ indexOf() ⭐
+
+## 2️⃣ indexOf() ⭐
+
 
 Value ka first occurrence:
 
@@ -636,7 +697,8 @@ list.indexOf(50)
 
 Exactly String ke indexOf() jaisa concept.
 
-3️⃣ lastIndexOf()
+## 3️⃣ lastIndexOf()
+
 
 Last occurrence:
 
@@ -645,11 +707,16 @@ System.out.println(list.lastIndexOf(20));
 Output:
 
 3
-Comparison
+
+### Comparison
+
 indexOf()      → first
 lastIndexOf()  → last
-4️⃣ ArrayList traverse karna ⭐⭐⭐
-Method 1 — Normal for
+
+## 4️⃣ ArrayList traverse karna ⭐⭐⭐
+
+### Method 1 — Normal for
+
 for(int i = 0; i < list.size(); i++) {
     System.out.println(list.get(i));
 }
@@ -659,7 +726,9 @@ C++:
 for(int i = 0; i < v.size(); i++) {
     cout << v[i] << endl;
 }
-Important
+
+### Important
+
 
 Java:
 
@@ -668,7 +737,9 @@ list.get(i)
 C++:
 
 v[i]
-5️⃣ Enhanced for-each loop ⭐
+
+## 5️⃣ Enhanced for-each loop ⭐
+
 
 Java:
 
@@ -688,7 +759,8 @@ Kab use kare?
 
 Jab sirf values chahiye aur index ki zarurat nahi.
 
-6️⃣ isEmpty()
+## 6️⃣ isEmpty()
+
 
 Check:
 
@@ -707,7 +779,9 @@ v.empty()
 Java:
 
 list.isEmpty()
-7️⃣ clear()
+
+## 7️⃣ clear()
+
 
 Saare elements delete:
 
@@ -724,7 +798,9 @@ clear()
 C++:
 
 v.clear();
-8️⃣ Sorting ⭐⭐⭐
+
+## 8️⃣ Sorting ⭐⭐⭐
+
 
 Ascending order mein sort karna.
 
@@ -734,6 +810,7 @@ Collections.sort(list);
 
 Iske liye:
 
+```java
 import java.util.Collections;
 
 Example:
@@ -965,6 +1042,8 @@ public class Main {
 
         System.out.println(list);
     }
+```
+
 }
 
 Output roughly:
@@ -978,20 +1057,25 @@ true
 2
 [10, 20, 20, 30]
 [30, 20, 20, 10]
-🧠 Part 2 Cheat Sheet
-Kaam	Java	C++
-Contains	list.contains(x)	find(...)
-First index	list.indexOf(x)	find(...) - begin()
-Last index	list.lastIndexOf(x)	reverse search
-Sort	Collections.sort(list)	sort(...)
-Reverse	Collections.reverse(list)	reverse(...)
-Max	Collections.max(list)	max_element()
-Min	Collections.min(list)	min_element()
-Frequency	Collections.frequency(list,x)	count(...)
-Swap	Collections.swap(list,i,j)	swap(...)
-Empty	list.isEmpty()	v.empty()
-Clear	list.clear()	v.clear()
-⭐ Ab tak ArrayList ke main weapons
+
+### 🧠 Part 2 Cheat Sheet
+
+| Kaam | Java | C++ |
+| --- | --- | --- |
+| Contains | list.contains(x) | find(...) |
+| First index | list.indexOf(x) | find(...) - begin() |
+| Last index | list.lastIndexOf(x) | reverse search |
+| Sort | Collections.sort(list) | sort(...) |
+| Reverse | Collections.reverse(list) | reverse(...) |
+| Max | Collections.max(list) | max_element() |
+| Min | Collections.min(list) | min_element() |
+| Frequency | Collections.frequency(list,x) | count(...) |
+| Swap | Collections.swap(list,i,j) | swap(...) |
+| Empty | list.isEmpty() | v.empty() |
+| Clear | list.clear() | v.clear() |
+
+### ⭐ Ab tak ArrayList ke main weapons
+
 list.add(x);
 list.add(i, x);
 
@@ -1024,8 +1108,10 @@ Next Part 3 mein hum Array ↔ ArrayList conversion, addAll(), removeAll(), reta
 Bilkul papa 😎 ArrayList – Part 3 start karte hain.
 Is part mein hum Array ↔ ArrayList conversion + addAll/removeAll/retainAll + copy + subList + 2D ArrayList karenge.
 
-🔥 ArrayList — Part 3
-1️⃣ Array → ArrayList
+# 🔥 ArrayList — Part 3
+
+## 1️⃣ Array → ArrayList
+
 
 Maan lo C++ mein:
 
@@ -1047,7 +1133,9 @@ System.out.println(list);
 Output:
 
 [10, 20, 30, 40]
-C++ comparison
+
+### C++ comparison
+
 for(int x : arr) {
     v.push_back(x);
 }
@@ -1060,7 +1148,8 @@ for(int x : arr) {
 
 बस push_back() की जगह add().
 
-2️⃣ ArrayList → Array
+## 2️⃣ ArrayList → Array
+
 
 Java:
 
@@ -1092,7 +1181,8 @@ for(int i = 0; i < list.size(); i++) {
 
 यह DSA में ज्यादा useful है।
 
-3️⃣ addAll()
+## 3️⃣ addAll()
+
 
 एक ArrayList के सारे elements दूसरी ArrayList में डालने के लिए।
 
@@ -1128,7 +1218,9 @@ b = [30, 40]
 तो:
 
 [10, 30, 40, 20]
-4️⃣ removeAll()
+
+## 4️⃣ removeAll()
+
 
 दूसरी list में जो elements हैं, उन्हें पहली list से remove कर दो।
 
@@ -1158,7 +1250,8 @@ a.removeAll(b);
 
 a में से b वाले सारे elements हटा दो।
 
-5️⃣ retainAll()
+## 5️⃣ retainAll()
+
 
 यह removeAll() का उल्टा है।
 
@@ -1186,7 +1279,9 @@ Output:
 याद रखने की trick 🧠
 removeAll → ये elements REMOVE करो
 retainAll → ये elements RETAIN/KEEP करो
-6️⃣ containsAll()
+
+## 6️⃣ containsAll()
+
 
 Check करता है कि पहली list में दूसरी list के सारे elements मौजूद हैं या नहीं।
 
@@ -1217,7 +1312,8 @@ false
 
 क्योंकि 50 a में नहीं है।
 
-7️⃣ ArrayList की Copy
+## 7️⃣ ArrayList की Copy
+
 
 बहुत important है।
 
@@ -1245,13 +1341,17 @@ copy.add(40);
 
 list = [10, 20, 30]
 copy = [10, 20, 30, 40]
-C++ comparison
+
+### C++ comparison
+
 vector<int> copy = v;
 
 Java:
 
 ArrayList<Integer> copy = new ArrayList<>(list);
-8️⃣ subList()
+
+## 8️⃣ subList()
+
 
 List का एक portion निकालना।
 
@@ -1298,7 +1398,9 @@ Independent copy चाहिए:
 
 ArrayList<Integer> subCopy =
         new ArrayList<>(list.subList(1, 4));
-9️⃣ 2D ArrayList 🔥
+
+## 9️⃣ 2D ArrayList 🔥
+
 
 C++ में:
 
@@ -1344,25 +1446,31 @@ Java:
 ArrayList<ArrayList<Integer>> mat;
 
 mat.get(0).add(10);
-🧠 Part 3 Cheat Sheet
-Java	काम
-addAll()	सारे elements add
-removeAll()	given elements remove
-retainAll()	केवल common elements रखो
-containsAll()	क्या सारे elements मौजूद हैं?
-new ArrayList<>(list)	copy
-subList(l,r)	portion निकालना
-toArray()	ArrayList → Array
-loop + add()	Array → ArrayList
-ArrayList<ArrayList<Integer>>	2D ArrayList
-सबसे important 5 याद रखो:
+
+### 🧠 Part 3 Cheat Sheet
+
+| Java | काम |
+| --- | --- |
+| addAll() | सारे elements add |
+| removeAll() | given elements remove |
+| retainAll() | केवल common elements रखो |
+| containsAll() | क्या सारे elements मौजूद हैं? |
+| new ArrayList<>(list) | copy |
+| subList(l,r) | portion निकालना |
+| toArray() | ArrayList → Array |
+| loop + add() | Array → ArrayList |
+| ArrayList<ArrayList<Integer>> | 2D ArrayList |
+
+### सबसे important 5 याद रखो:
+
 list.add(x);
 list.get(i);
 list.set(i, x);
 list.remove(i);
 list.size();
 
-और Part 3 के नए weapons:
+### और Part 3 के नए weapons:
+
 
 list.addAll(other);
 list.removeAll(other);
@@ -1373,4 +1481,3 @@ list.subList(l, r);
 Part 3 complete ✅
 
 Next Part में हम ArrayList ke advanced DSA wale operations — binary search, custom sorting/Comparator, frequency patterns, capacity, aur important traps करेंगे.
-

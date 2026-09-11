@@ -1,7 +1,9 @@
 Haan papa ❤️ StringBuilder bilkul zero se karte hain. Assume karte hain ki tumhe iske baare mein kuch bhi nahi pata. Pehle ye samjhenge ki StringBuilder ki zarurat hi kyun padi, phir syntax aur har important function.
 
-🟢 PART 6 — StringBuilder
-1. Sabse pehle problem samjho
+# 🟢 PART 6 — StringBuilder
+
+## 1. Sabse pehle problem samjho
+
 
 Humne padha tha:
 
@@ -31,7 +33,9 @@ Lekin actually Java ne new String create ki:
 Agar baar-baar String ko modify karna pade, to unnecessary objects create ho sakte hain.
 
 Yahin par StringBuilder kaam aata hai. 🔥
-2. StringBuilder kya hai?
+
+## 2. StringBuilder kya hai?
+
 
 Simple language mein:
 
@@ -53,20 +57,26 @@ StringBuilder sb = new StringBuilder("Hello");
 
 Ab sb ke characters ko change/add/delete kar sakte ho.
 
-3. StringBuilder kaise banate hain?
-Empty StringBuilder
+## 3. StringBuilder kaise banate hain?
+
+### Empty StringBuilder
+
 StringBuilder sb = new StringBuilder();
 
 Initially:
 
 ""
-Initial String ke saath
+
+### Initial String ke saath
+
 StringBuilder sb = new StringBuilder("Hello");
 
 Initially:
 
 Hello
-4. append() ⭐⭐⭐
+
+## 4. append() ⭐⭐⭐
+
 
 Ye sabse important function hai.
 
@@ -91,7 +101,9 @@ sb.append(" World");
 To:
 
 Hello World
-Multiple append
+
+### Multiple append
+
 StringBuilder sb = new StringBuilder();
 
 sb.append("Hello");
@@ -103,7 +115,9 @@ System.out.println(sb);
 Output:
 
 Hello Java
-5. append() mein kya-kya add kar sakte hain?
+
+## 5. append() mein kya-kya add kar sakte hain?
+
 
 Almost kuch bhi:
 
@@ -129,7 +143,9 @@ System.out.println(sb);
 Output:
 
 Age: 21
-6. StringBuilder ko print kaise karte hain?
+
+## 6. StringBuilder ko print kaise karte hain?
+
 
 Simple:
 
@@ -137,7 +153,8 @@ System.out.println(sb);
 
 Java automatically usko readable String ki tarah print kar deta hai.
 
-7. length() ⭐
+## 7. length() ⭐
+
 
 StringBuilder mein bhi:
 
@@ -157,7 +174,9 @@ String       → s.length()
 StringBuilder → sb.length()
 Array         → arr.length
 ArrayList     → list.size()
-8. charAt() ⭐
+
+## 8. charAt() ⭐
+
 
 Kisi index ka character:
 
@@ -174,7 +193,9 @@ l
 Same concept as String:
 
 sb.charAt(i)
-9. setCharAt() ⭐⭐⭐
+
+## 9. setCharAt() ⭐⭐⭐
+
 
 Ye StringBuilder ka bahut useful function hai.
 
@@ -200,7 +221,9 @@ Nahi kar sakte.
 
 StringBuilder:
 sb.setCharAt(0, 'Y'); // ✅
-10. insert() ⭐⭐
+
+## 10. insert() ⭐⭐
+
 
 Kisi particular index par character/string insert karna.
 
@@ -222,7 +245,9 @@ H l l o
 Index 1 par e insert:
 
 H e l l o
-String insert
+
+### String insert
+
 StringBuilder sb = new StringBuilder("Hello");
 
 sb.insert(5, " World");
@@ -232,7 +257,9 @@ System.out.println(sb);
 Output:
 
 Hello World
-11. delete() ⭐⭐⭐
+
+## 11. delete() ⭐⭐⭐
+
 
 Kisi range ko delete karna.
 
@@ -268,7 +295,9 @@ Means:
 Result:
 
 Ho
-12. deleteCharAt() ⭐
+
+## 12. deleteCharAt() ⭐
+
 
 Sirf ek character delete karna:
 
@@ -284,7 +313,8 @@ Hllo
 
 Index 1 ka e delete ho gaya.
 
-13. reverse() 🔥🔥🔥
+## 13. reverse() 🔥🔥🔥
+
 
 Ye DSA mein bahut important hai.
 
@@ -313,7 +343,9 @@ olleH
 Agar final result String chahiye:
 
 String reversed = sb.toString();
-14. toString() ⭐⭐⭐
+
+## 14. toString() ⭐⭐⭐
+
 
 StringBuilder ko normal String mein convert karna:
 
@@ -335,7 +367,9 @@ and
 StringBuilder → String
 
 String s = sb.toString();
-15. replace() — StringBuilder mein
+
+## 15. replace() — StringBuilder mein
+
 
 StringBuilder mein range replace kar sakte ho.
 
@@ -358,7 +392,9 @@ Yollo
 Because:
 
 He → Yo
-16. capacity() — abhi basic understanding
+
+## 16. capacity() — abhi basic understanding
+
 
 StringBuilder internally kuch extra space reserve karta hai.
 
@@ -387,7 +423,8 @@ capacity = more than 5
 
 Abhi DSA ke liye capacity ko deeply yaad karne ki zarurat nahi.
 
-17. StringBuilder ka sabse important use — answer banana ⭐⭐⭐
+## 17. StringBuilder ka sabse important use — answer banana ⭐⭐⭐
+
 
 Suppose question:
 
@@ -412,9 +449,11 @@ for(int i = s.length() - 1; i >= 0; i--) {
 
 return ans.toString();
 
-🔥 Ye pattern bahut important hai.
+### 🔥 Ye pattern bahut important hai.
 
-18. Example — vowels remove karna
+
+## 18. Example — vowels remove karna
+
 
 Suppose:
 
@@ -449,7 +488,8 @@ hll
 
 Yahan StringBuilder ka actual DSA use samajh aa raha hai.
 
-19. Example — String ko uppercase banana
+## 19. Example — String ko uppercase banana
+
 String s = "hello";
 
 StringBuilder ans = new StringBuilder();
@@ -466,22 +506,28 @@ System.out.println(ans);
 Output:
 
 HELLO
-20. StringBuilder vs String
+
+## 20. StringBuilder vs String
+
 
 Ye difference pakka yaad karna. ⭐⭐⭐
 
-Feature	String	StringBuilder
-Mutable?	❌ No	✅ Yes
-Character change	❌	✅
-charAt()	✅	✅
-length()	✅	✅
-append()	❌	✅
-setCharAt()	❌	✅
-insert()	❌	✅
-delete()	❌	✅
-reverse()	❌	✅
-toString()	Already String	String mein convert
-21. Ek complete example 🔥
+| Feature | String | StringBuilder |
+| --- | --- | --- |
+| Mutable? | ❌ No | ✅ Yes |
+| Character change | ❌ | ✅ |
+| charAt() | ✅ | ✅ |
+| length() | ✅ | ✅ |
+| append() | ❌ | ✅ |
+| setCharAt() | ❌ | ✅ |
+| insert() | ❌ | ✅ |
+| delete() | ❌ | ✅ |
+| reverse() | ❌ | ✅ |
+| toString() | Already String | String mein convert |
+
+## 21. Ek complete example 🔥
+
+```java
 public class Main {
     public static void main(String[] args) {
 
@@ -503,6 +549,8 @@ public class Main {
 
         System.out.println(s);
     }
+```
+
 }
 
 Step-by-step:
@@ -517,7 +565,9 @@ insert(5, "!")
 Yello! World
 reverse()
 dlroW !olleY
-🧠 StringBuilder ka Golden Cheat Sheet
+
+### 🧠 StringBuilder ka Golden Cheat Sheet
+
 Create
 StringBuilder sb = new StringBuilder();
 String ke saath
@@ -540,7 +590,9 @@ Length
 sb.length();
 String mein convert
 sb.toString();
-🔥 Sabse important DSA pattern
+
+### 🔥 Sabse important DSA pattern
+
 
 Jab tumhe String ko traverse karke answer build karna ho:
 

@@ -1,6 +1,7 @@
 Ab sirf STRINGS ke questions honge. No Arrays-only, no Stack, no random topics.
 
-🟢 Level 1 — Super Easy / Ekdum Basic
+# 🟢 Level 1 — Super Easy / Ekdum Basic
+
 
 20 Questions
 
@@ -24,7 +25,9 @@ Ab sirf STRINGS ke questions honge. No Arrays-only, no Stack, no random topics.
 1021. Remove Outermost Parentheses
 1614. Maximum Nesting Depth of the Parentheses
 1704. Determine if String Halves Are Alike
-🟡 Level 2 — Easy
+
+# 🟡 Level 2 — Easy
+
 
 15 Questions
 
@@ -43,7 +46,9 @@ Ab sirf STRINGS ke questions honge. No Arrays-only, no Stack, no random topics.
 1512. Number of Good Pairs
 1663. Smallest String With A Given Numeric Value
 1945. Sum of Digits of String After Convert
-🔴 Level 3 — Medium
+
+# 🔴 Level 3 — Medium
+
 
 20 Questions — Kal karenge
 
@@ -70,7 +75,8 @@ Ab sirf STRINGS ke questions honge. No Arrays-only, no Stack, no random topics.
 
 55 ko duplicate nahi rakhenge — practice mein iski jagah ek naya Medium String question lenge.
 
-🎯 Abhi ka target
+## 🎯 Abhi ka target
+
 
 1–20 → ekdum basic Strings
 21–35 → Easy Strings
@@ -78,7 +84,8 @@ Ab sirf STRINGS ke questions honge. No Arrays-only, no Stack, no random topics.
 
 Aur ab hum Question 1 se start karenge, ek-ek karke. Tum next bologe tabhi next question. ❤️
 
-709. To Lower Case
+## 709. To Lower Case
+
 Solved
 Easy
 Topics
@@ -89,19 +96,25 @@ Given a string s, return the string after replacing every uppercase letter with 
 
  
 
-Example 1:
+**Example 1:**
+
 
 Input: s = "Hello"
 Output: "hello"
-Example 2:
+
+**Example 2:**
+
 
 Input: s = "here"
 Output: "here"
-Example 3:
+
+**Example 3:**
+
 
 Input: s = "LOVELY"
 Output: "lovely"
 
+```java
 class Solution {
     public String toLowerCase(String s) {
 
@@ -441,10 +454,14 @@ class Solution {
         return ans.toString();
     }
 }
-Ek alternative — replace()
+```
+
+### Ek alternative — replace()
+
 
 Is question ko aur bhi short kar sakte hain:
 
+```java
 class Solution {
     public String interpret(String command) {
 
@@ -491,3 +508,4 @@ class Solution {
         return new String(ans);
     }
 }
+```

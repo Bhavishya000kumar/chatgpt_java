@@ -1,21 +1,25 @@
 Haan papa ❤️ bilkul. String ko bhi parts mein tod ke padhenge, taaki ek-ek concept properly clear ho aur baad mein LC ke questions mein dikkat na aaye.
 
-🚀 Java Strings — Complete Learning Plan
+# 🚀 Java Strings — Complete Learning Plan
+
 
 Hum isko 7 parts mein karenge:
 
-Part	Topic
-Part 1	String Basics + Creation + length() + charAt()
-Part 2	String Comparison — equals(), ==, compareTo()
-Part 3	String Searching — indexOf(), contains(), startsWith() etc.
-Part 4	String Modification — substring(), replace(), trim(), concat() etc.
-Part 5	String ↔ Array + split() + character handling
-Part 6	StringBuilder — DSA ke liye bahut important
-Part 7	String DSA Tricks + Patterns + Common Mistakes
+| Part | Topic |
+| --- | --- |
+| Part 1 | String Basics + Creation + length() + charAt() |
+| Part 2 | String Comparison — equals(), ==, compareTo() |
+| Part 3 | String Searching — indexOf(), contains(), startsWith() etc. |
+| Part 4 | String Modification — substring(), replace(), trim(), concat() etc. |
+| Part 5 | String ↔ Array + split() + character handling |
+| Part 6 | StringBuilder — DSA ke liye bahut important |
+| Part 7 | String DSA Tricks + Patterns + Common Mistakes |
+
 
 Uske baad:
 
-🔥 Java String → 50 Easy/Basic LeetCode Questions
+# 🔥 Java String → 50 Easy/Basic LeetCode Questions
+
 
 Pehle 50 questions ko easy se gradually karenge:
 
@@ -25,11 +29,13 @@ Aur har question mein wahi format rakhenge:
 
 Question meaning → Approach → Trick → Simple code → Dry run → Complexity
 
-🟢 PART 1 — Java String Basics
+# 🟢 PART 1 — Java String Basics
+
 
 Aaj sirf basic foundation strong karenge.
 
-1. String kya hoti hai?
+## 1. String kya hoti hai?
+
 
 String basically characters ka sequence hota hai.
 
@@ -44,10 +50,14 @@ B h a v i s h y a
 
 Har character ka ek index hota hai, jo 0 se start hota hai.
 
-2. String create kaise kare?
-Method 1 — Most common
+## 2. String create kaise kare?
+
+### Method 1 — Most common
+
 String s = "Hello";
-Method 2 — new keyword
+
+### Method 2 — new keyword
+
 String s = new String("Hello");
 
 DSA mein mostly:
@@ -56,7 +66,8 @@ String s = "Hello";
 
 hi use karenge.
 
-3. String ki length — length()
+## 3. String ki length — length()
+
 
 String mein kitne characters hain:
 
@@ -77,7 +88,8 @@ ArrayList → list.size()
 
 Ye teen alag hain.
 
-4. charAt() — character nikalna
+## 4. charAt() — character nikalna
+
 
 Kisi particular index ka character chahiye:
 
@@ -94,7 +106,9 @@ e
 o
 Formula
 s.charAt(index)
-5. String ko loop mein traverse karna
+
+## 5. String ko loop mein traverse karna
+
 
 Ye DSA mein bahut important hai.
 
@@ -111,7 +125,9 @@ e
 l
 l
 o
-Golden pattern ⭐
+
+### Golden pattern ⭐
+
 for(int i = 0; i < s.length(); i++) {
     char ch = s.charAt(i);
     
@@ -120,7 +136,8 @@ for(int i = 0; i < s.length(); i++) {
 
 String ke bahut saare LC questions isi pattern se start honge.
 
-6. Reverse traversal
+## 6. Reverse traversal
+
 
 Agar string ko last se first traverse karna ho:
 
@@ -146,7 +163,9 @@ Backward:
 i = s.length() - 1
 i >= 0
 i--
-7. First aur Last Character
+
+## 7. First aur Last Character
+
 String s = "Bhavishya";
 
 char first = s.charAt(0);
@@ -159,11 +178,15 @@ Output:
 
 B
 a
-Golden formula ⭐
+
+### Golden formula ⭐
+
 first = s.charAt(0);
 
 last = s.charAt(s.length() - 1);
-8. String empty hai ya nahi?
+
+## 8. String empty hai ya nahi?
+
 String s = "";
 
 System.out.println(s.isEmpty());
@@ -181,7 +204,9 @@ System.out.println(s.isEmpty());
 Output:
 
 false
-9. Important: String immutable hoti hai
+
+## 9. Important: String immutable hoti hai
+
 
 Ye concept abhi bas samajh lo, detail baad mein.
 
@@ -209,17 +234,22 @@ Hello World
 
 Isi wajah se baad mein StringBuilder padhenge.
 
-🧠 PART 1 ka Cheat Sheet
+### 🧠 PART 1 ka Cheat Sheet
+
 String s = "Hello";
-Kaam	Syntax
-Length	s.length()
-Character	s.charAt(i)
-First char	s.charAt(0)
-Last char	s.charAt(s.length()-1)
-Empty check	s.isEmpty()
-Forward traversal	for(int i=0; i<s.length();i++)
-Backward traversal	for(int i=s.length()-1;i>=0;i--)
-⭐ Sabse important DSA pattern
+
+| Kaam | Syntax |
+| --- | --- |
+| Length | s.length() |
+| Character | s.charAt(i) |
+| First char | s.charAt(0) |
+| Last char | s.charAt(s.length()-1) |
+| Empty check | s.isEmpty() |
+| Forward traversal | for(int i=0; i<s.length();i++) |
+| Backward traversal | for(int i=s.length()-1;i>=0;i--) |
+
+### ⭐ Sabse important DSA pattern
+
 for(int i = 0; i < s.length(); i++) {
     char ch = s.charAt(i);
     
@@ -232,7 +262,8 @@ Pehle ye basics solid karenge, phir Part 2: equals() vs == + compareTo(), jo Jav
 
 Bilkul papa ❤️ chalo Part 2 start karte hain.
 
-🟢 PART 2 — String Comparison in Java
+# 🟢 PART 2 — String Comparison in Java
+
 
 Ye part bahut important hai, especially interviews + LeetCode ke liye.
 
@@ -241,7 +272,9 @@ Aaj mainly 3 cheezein:
 equals()
 ==
 compareTo()
-1. equals() — String ka actual content compare karta hai ⭐
+
+## 1. equals() — String ka actual content compare karta hai ⭐
+
 String a = "Hello";
 String b = "Hello";
 
@@ -253,7 +286,8 @@ true
 
 Kyunki dono strings ke andar same characters hain.
 
-Example
+### Example
+
 String a = "Hello";
 String b = "World";
 
@@ -267,7 +301,9 @@ Golden rule ⭐
 String ka content compare karna ho → equals()
 
 a.equals(b)
-2. == — Reference compare karta hai
+
+## 2. == — Reference compare karta hai
+
 
 Ye thoda important concept hai.
 
@@ -310,17 +346,21 @@ b → object 2
 
 Reference alag → false
 
-🔥 Sabse important difference
-Operator / Function	Kya compare karta hai?
-equals()	Content
-==	Reference
-compareTo()	Lexicographical order
+### 🔥 Sabse important difference
+
+| Operator / Function | Kya compare karta hai? |
+| --- | --- |
+| equals() | Content |
+| == | Reference |
+| compareTo() | Lexicographical order |
+
 DSA mein mostly:
 s1.equals(s2)
 
 use karna hai.
 
-3. compareTo()
+## 3. compareTo()
+
 
 Ye strings ko dictionary/lexicographical order mein compare karta hai.
 
@@ -365,7 +405,8 @@ a baad mein aata hai:
 
 → positive
 
-4. Actual number kaise decide hota hai?
+## 4. Actual number kaise decide hota hai?
+
 
 Java characters ke Unicode values compare karta hai.
 
@@ -392,7 +433,8 @@ t > r
 
 Therefore result positive.
 
-5. Case Sensitivity ⚠️
+## 5. Case Sensitivity ⚠️
+
 
 String comparison case-sensitive hota hai.
 
@@ -408,7 +450,9 @@ false
 Because:
 
 H ≠ h
-Case ignore karke compare karna
+
+### Case ignore karke compare karna
+
 String a = "Hello";
 String b = "hello";
 
@@ -419,7 +463,9 @@ Output:
 true
 Syntax:
 s1.equalsIgnoreCase(s2)
-6. Important DSA Example
+
+## 6. Important DSA Example
+
 
 Question:
 
@@ -444,7 +490,9 @@ if(s1.equals(s2)) {
 Output:
 
 Same
-🧠 PART 2 Cheat Sheet
+
+### 🧠 PART 2 Cheat Sheet
+
 s1.equals(s2)
 
 ➡️ Content same hai ya nahi
@@ -461,7 +509,8 @@ s1.equalsIgnoreCase(s2)
 
 ➡️ Case ignore karke content compare
 
-⭐ Exam/Interview mein yaad rakhna
+### ⭐ Exam/Interview mein yaad rakhna
+
 
 String equality → equals()
 Reference equality → ==
@@ -475,7 +524,8 @@ Bilkul papa ❤️ chalo Part 3 — String Searching start karte hain.
 
 Is part mein hum seekhenge ki String ke andar kisi character/word ko search kaise karna hai.
 
-🟢 PART 3 — String Searching
+# 🟢 PART 3 — String Searching
+
 
 Main functions:
 
@@ -484,7 +534,9 @@ lastIndexOf()
 contains()
 startsWith()
 endsWith()
-1. indexOf() ⭐
+
+## 1. indexOf() ⭐
+
 
 Kisi character/string ka first occurrence ka index deta hai.
 
@@ -521,10 +573,12 @@ Output:
 
 -1
 
-⭐ Very important:
+### ⭐ Very important:
+
 indexOf() mein not found → -1
 
-2. lastIndexOf()
+## 2. lastIndexOf()
+
 
 Kisi character/string ka last occurrence ka index deta hai.
 
@@ -547,7 +601,9 @@ s.lastIndexOf('l');   // 3
 Golden rule ⭐
 indexOf     → first occurrence
 lastIndexOf → last occurrence
-3. contains() ⭐
+
+## 3. contains() ⭐
+
 
 Check karta hai ki String ke andar given substring present hai ya nahi.
 
@@ -564,13 +620,17 @@ System.out.println(s.contains("world"));
 Output:
 
 true
-Not present
+
+### Not present
+
 System.out.println(s.contains("java"));
 
 Output:
 
 false
-Important
+
+### Important
+
 
 contains() directly String leta hai:
 
@@ -583,7 +643,9 @@ s.contains('h')       // ❌
 Character search karna ho:
 
 s.indexOf('h')        // ✅
-4. startsWith()
+
+## 4. startsWith()
+
 
 Check karta hai ki String given text se start ho rahi hai ya nahi.
 
@@ -602,12 +664,16 @@ System.out.println(s.startsWith("World"));
 Output:
 
 false
-Example
+
+### Example
+
 String s = "Java Programming";
 
 System.out.println(s.startsWith("Java"));    // true
 System.out.println(s.startsWith("Python"));  // false
-5. endsWith()
+
+## 5. endsWith()
+
 
 Check karta hai ki String given text par end ho rahi hai ya nahi.
 
@@ -623,14 +689,17 @@ System.out.println(s.endsWith("Hello"));
 Output:
 
 false
-🔥 startsWith() vs endsWith()
+
+### 🔥 startsWith() vs endsWith()
+
 String s = "hello.java";
 s.startsWith("hello")  // true
 s.endsWith(".java")    // true
 
 Useful jab file extension, prefix, suffix etc. check karna ho.
 
-6. Real DSA Example
+## 6. Real DSA Example
+
 
 Suppose:
 
@@ -649,7 +718,9 @@ System.out.println(index);
 Output:
 
 3
-7. Character present hai ya nahi?
+
+## 7. Character present hai ya nahi?
+
 String s = "programming";
 
 if(s.indexOf('z') == -1) {
@@ -661,7 +732,9 @@ if(s.indexOf('z') == -1) {
 Output:
 
 Not Present
-⭐ Important pattern
+
+### ⭐ Important pattern
+
 if(s.indexOf(ch) != -1)
 
 ➡️ character present hai.
@@ -672,7 +745,8 @@ if(s.indexOf(ch) == -1)
 
 Ye pattern LC questions mein kaafi useful hoga.
 
-8. indexOf() with starting position
+## 8. indexOf() with starting position
+
 
 Ye thoda advanced but important hai.
 
@@ -700,7 +774,8 @@ b a n a n a
 
 Index 2 ke baad first a → 3.
 
-9. Sabko ek saath dekho 🔥
+## 9. Sabko ek saath dekho 🔥
+
 String s = "hello world";
 
 System.out.println(s.indexOf('o'));
@@ -719,14 +794,19 @@ Output:
 true
 true
 true
-🧠 PART 3 Cheat Sheet
-Function	Kaam	Return
-indexOf()	First occurrence	int
-lastIndexOf()	Last occurrence	int
-contains()	substring present?	boolean
-startsWith()	prefix check	boolean
-endsWith()	suffix check	boolean
-⭐ 5 golden patterns
+
+### 🧠 PART 3 Cheat Sheet
+
+| Function | Kaam | Return |
+| --- | --- | --- |
+| indexOf() | First occurrence | int |
+| lastIndexOf() | Last occurrence | int |
+| contains() | substring present? | boolean |
+| startsWith() | prefix check | boolean |
+| endsWith() | suffix check | boolean |
+
+### ⭐ 5 golden patterns
+
 s.indexOf('a')
 
 First a
@@ -766,7 +846,8 @@ Bilkul papa ❤️ chalo Part 4 — String Modification start karte hain.
 
 Is part mein hum String ke andar se part nikalna, replace karna, spaces hatana, strings jodna etc. seekhenge.
 
-🟢 PART 4 — String Modification
+# 🟢 PART 4 — String Modification
+
 
 Aaj ye functions:
 
@@ -775,7 +856,9 @@ replace()
 replaceAll()
 trim()
 concat()
-1. substring() ⭐⭐⭐
+
+## 1. substring() ⭐⭐⭐
+
 
 Ye String ka ek portion nikalta hai.
 
@@ -829,7 +912,9 @@ index 2 se lekar end tak.
 H e l l o
 0 1 2 3 4
     ↑
-🔥 Important Formula
+
+### 🔥 Important Formula
+
 s.substring(l, r)
 
 means:
@@ -842,11 +927,13 @@ l included, r excluded
 
 Ye concept LeetCode mein bahut kaam aayega.
 
-2. replace() ⭐⭐
+## 2. replace() ⭐⭐
+
 
 String ke andar kisi character/string ko replace karta hai.
 
-Character replace
+### Character replace
+
 String s = "hello";
 
 s = s.replace('l', 'x');
@@ -859,7 +946,8 @@ hexxo
 
 Dono l replace ho gaye.
 
-String replace
+### String replace
+
 String s = "I love Java";
 
 s = s.replace("Java", "C++");
@@ -869,7 +957,9 @@ System.out.println(s);
 Output:
 
 I love C++
-3. replaceAll()
+
+## 3. replaceAll()
+
 
 Ye regular expression (regex) ke according replace karta hai.
 
@@ -887,7 +977,8 @@ abcxyz
 
 [0-9] → saare digits.
 
-Multiple spaces remove karna
+### Multiple spaces remove karna
+
 String s = "hello   world";
 
 s = s.replaceAll("\\s+", " ");
@@ -902,7 +993,8 @@ hello world
 
 ⚠️ Abhi regex detail mein jaane ki zarurat nahi. Bas itna yaad rakho ki replaceAll() regex support karta hai.
 
-4. trim() ⭐
+## 4. trim() ⭐
+
 
 Beginning aur ending ke extra spaces remove karta hai.
 
@@ -920,7 +1012,9 @@ trim() middle ke spaces remove nahi karta.
 "   Hello   World   "
        ↓
 "Hello   World"
-5. concat()
+
+## 5. concat()
+
 
 Do strings ko join karta hai.
 
@@ -942,7 +1036,9 @@ String c = a.concat(" ").concat(b);
 Output:
 
 Hello World
-6. + bhi String join karta hai
+
+## 6. + bhi String join karta hai
+
 
 Actually DSA mein hum mostly + use karenge.
 
@@ -957,7 +1053,8 @@ Output:
 
 Hello World
 
-Simple cases mein:
+### Simple cases mein:
+
 
 a + b
 
@@ -965,7 +1062,8 @@ bilkul fine hai.
 
 Bahut saare modifications karne hain → baad mein StringBuilder better rahega.
 
-7. ⚠️ String immutable hai
+## 7. ⚠️ String immutable hai
+
 
 Ye bahut important hai.
 
@@ -983,7 +1081,8 @@ Kyun?
 
 String modify nahi hui.
 
-Correct:
+### Correct:
+
 
 s = s.replace('H', 'Y');
 
@@ -999,13 +1098,16 @@ String functions ka result generally new String deta hai.
 Isliye:
 
 s = s.replace(...);
-8. Real DSA Example — First word nikalna
+
+## 8. Real DSA Example — First word nikalna
+
 
 Suppose:
 
 String s = "Hello World";
 
-First space:
+### First space:
+
 
 int pos = s.indexOf(' ');
 
@@ -1022,7 +1124,8 @@ String first = s.substring(0, pos);
 
 Aage words/sentences wale questions mein kaam aayega.
 
-9. Real DSA Example — Last word
+## 9. Real DSA Example — Last word
+
 String s = "Hello World";
 
 int pos = s.lastIndexOf(' ');
@@ -1047,15 +1150,19 @@ substring(pos + 1)
 
 → space ke baad se end tak.
 
-🧠 PART 4 Cheat Sheet
-Function	Kaam
-substring(l,r)	l se r-1 tak portion
-substring(l)	l se end tak
-replace(a,b)	character/string replace
-replaceAll(regex,replacement)	regex based replacement
-trim()	starting/ending spaces remove
-concat()	strings join
-⭐ Sabse important
+### 🧠 PART 4 Cheat Sheet
+
+| Function | Kaam |
+| --- | --- |
+| substring(l,r) | l se r-1 tak portion |
+| substring(l) | l se end tak |
+| replace(a,b) | character/string replace |
+| replaceAll(regex,replacement) | regex based replacement |
+| trim() | starting/ending spaces remove |
+| concat() | strings join |
+
+### ⭐ Sabse important
+
 s.substring(l, r)
 
 ➡️ l included, r excluded
@@ -1068,7 +1175,8 @@ s.trim()
 
 ➡️ sirf beginning + ending spaces.
 
-🔥 Ab tak ke 4 Parts
+### 🔥 Ab tak ke 4 Parts
+
 PART 1 → String Basics
           length(), charAt()
 
@@ -1089,7 +1197,8 @@ Bilkul papa ❤️ chalo Part 5 — String ↔ Array + split() + Character Handl
 
 Ye part important hai kyunki Strings aur Arrays ko combine karke bahut saare LeetCode questions solve hote hain.
 
-🟢 PART 5 — String + Array
+# 🟢 PART 5 — String + Array
+
 
 Aaj hum seekhenge:
 
@@ -1100,7 +1209,9 @@ split()
 Character checking
 Character conversion
 Basic character manipulation
-1. String → char[] ⭐
+
+## 1. String → char[] ⭐
+
 
 Agar String ke saare characters ko array mein convert karna ho:
 
@@ -1120,7 +1231,9 @@ Print:
 for(int i = 0; i < arr.length; i++) {
     System.out.println(arr[i]);
 }
-2. char[] → String ⭐
+
+## 2. char[] → String ⭐
+
 
 Agar character array ko wapas String banana hai:
 
@@ -1139,9 +1252,11 @@ s.toCharArray()
 char[] → String
 new String(arr)
 
-🔥 Ye dono DSA mein bahut common hain.
+### 🔥 Ye dono DSA mein bahut common hain.
 
-3. Character array ko modify karna
+
+## 3. Character array ko modify karna
+
 
 String immutable hai, lekin char[] modify kar sakte ho.
 
@@ -1161,7 +1276,8 @@ Hello
 
 Ye trick useful hai jab String ke individual characters modify karne hon.
 
-4. String → String[] using split() ⭐⭐⭐
+## 4. String → String[] using split() ⭐⭐⭐
+
 
 Suppose:
 
@@ -1188,7 +1304,9 @@ Output:
 Hello
 World
 Java
-5. split() ka basic formula
+
+## 5. split() ka basic formula
+
 String[] arr = s.split("delimiter");
 
 Delimiter matlab kis basis par todna hai.
@@ -1209,7 +1327,9 @@ Result:
 apple
 banana
 mango
-6. split() + multiple spaces ⚠️
+
+## 6. split() + multiple spaces ⚠️
+
 
 Suppose:
 
@@ -1232,11 +1352,13 @@ trim() → beginning/end spaces
 
 Ye pattern sentence/word problems mein bahut useful hai.
 
-7. Character checking — Character class ⭐
+## 7. Character checking — Character class ⭐
+
 
 Java mein characters ke liye built-in Character class hoti hai.
 
-Digit check
+### Digit check
+
 char ch = '7';
 
 System.out.println(Character.isDigit(ch));
@@ -1244,7 +1366,9 @@ System.out.println(Character.isDigit(ch));
 Output:
 
 true
-Letter check
+
+### Letter check
+
 char ch = 'A';
 
 System.out.println(Character.isLetter(ch));
@@ -1252,9 +1376,13 @@ System.out.println(Character.isLetter(ch));
 Output:
 
 true
-Letter or digit
+
+### Letter or digit
+
 Character.isLetterOrDigit(ch)
-Whitespace
+
+### Whitespace
+
 Character.isWhitespace(ch)
 
 Example:
@@ -1266,7 +1394,9 @@ System.out.println(Character.isWhitespace(ch));
 Output:
 
 true
-8. Uppercase / Lowercase check
+
+## 8. Uppercase / Lowercase check
+
 char ch = 'A';
 
 System.out.println(Character.isUpperCase(ch));
@@ -1278,7 +1408,9 @@ true
 Similarly:
 
 Character.isLowerCase(ch)
-9. Character → lowercase
+
+## 9. Character → lowercase
+
 char ch = 'A';
 
 ch = Character.toLowerCase(ch);
@@ -1288,7 +1420,9 @@ System.out.println(ch);
 Output:
 
 a
-10. Character → uppercase
+
+## 10. Character → uppercase
+
 char ch = 'a';
 
 ch = Character.toUpperCase(ch);
@@ -1298,7 +1432,9 @@ System.out.println(ch);
 Output:
 
 A
-11. Very important DSA trick 🔥
+
+## 11. Very important DSA trick 🔥
+
 
 Suppose:
 
@@ -1328,7 +1464,8 @@ d
 
 Isse hum original String ko modify nahi kar rahe, bas processing ke time lowercase bana rahe hain.
 
-12. Character digit ko integer mein convert karna ⭐⭐⭐
+## 12. Character digit ko integer mein convert karna ⭐⭐⭐
+
 
 Suppose:
 
@@ -1351,11 +1488,15 @@ System.out.println(digit);
 Output:
 
 7
-🔥 Ye DSA ka bahut important trick hai.
+
+### 🔥 Ye DSA ka bahut important trick hai.
+
 '8' - '0' = 8
 '5' - '0' = 5
 '2' - '0' = 2
-13. Integer digit → Character
+
+## 13. Integer digit → Character
+
 
 Agar:
 
@@ -1376,7 +1517,9 @@ System.out.println(ch);
 Output:
 
 7
-14. Character ka ASCII/Unicode value
+
+## 14. Character ka ASCII/Unicode value
+
 char ch = 'A';
 
 int value = ch;
@@ -1406,7 +1549,9 @@ Isliye:
 ...
 '0' → 48
 '1' → 49
-15. Character frequency ka basic pattern ⭐⭐⭐
+
+## 15. Character frequency ka basic pattern ⭐⭐⭐
+
 
 Suppose:
 
@@ -1435,7 +1580,8 @@ n → 2
 
 Ye concept aage 50 LC questions mein bahut use hoga.
 
-🧠 PART 5 Cheat Sheet
+### 🧠 PART 5 Cheat Sheet
+
 String → char array
 char[] arr = s.toCharArray();
 char array → String
@@ -1444,19 +1590,29 @@ String → words
 String[] words = s.split(" ");
 Multiple spaces
 String[] words = s.trim().split("\\s+");
-Digit check
+
+### Digit check
+
 Character.isDigit(ch)
-Letter check
+
+### Letter check
+
 Character.isLetter(ch)
-Lowercase
+
+### Lowercase
+
 Character.toLowerCase(ch)
-Uppercase
+
+### Uppercase
+
 Character.toUpperCase(ch)
 Digit character → integer
 int digit = ch - '0';
 Integer → digit character
 char ch = (char)(digit + '0');
-🔥 Ab String ka ek important connection samjho
+
+### 🔥 Ab String ka ek important connection samjho
+
 String
   ↓
 toCharArray()
