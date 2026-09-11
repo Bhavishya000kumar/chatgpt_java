@@ -86,12 +86,8 @@ Aur ab hum Question 1 se start karenge, ek-ek karke. Tum next bologe tabhi next 
 
 ## 709. To Lower Case
 
-Solved
-Easy
-Topics
-premium lock icon
-Companies
-Hint
+> **Solved** | **Easy** | **Topics** | **premium lock icon** | **Companies** | **Hint**
+
 Given a string s, return the string after replacing every uppercase letter with the same lowercase letter.
 
  
@@ -99,20 +95,20 @@ Given a string s, return the string after replacing every uppercase letter with 
 **Example 1:**
 
 
-Input: s = "Hello"
-Output: "hello"
+**Input:** s = "Hello"
+**Output:** "hello"
 
 **Example 2:**
 
 
-Input: s = "here"
-Output: "here"
+**Input:** s = "here"
+**Output:** "here"
 
 **Example 3:**
 
 
-Input: s = "LOVELY"
-Output: "lovely"
+**Input:** s = "LOVELY"
+**Output:** "lovely"
 
 ```java
 class Solution {
@@ -130,29 +126,35 @@ class Solution {
         return ans.toString();
     }
 }
+```
 
-344. Reverse String
-Solved
-Easy
-Topics
-premium lock icon
-Companies
-Hint
+
+---
+
+## 344. Reverse String
+
+> **Solved** | **Easy** | **Topics** | **premium lock icon** | **Companies** | **Hint**
+
 Write a function that reverses a string. The input string is given as an array of characters s.
 
 You must do this by modifying the input array in-place with O(1) extra memory.
 
  
 
-Example 1:
+### Example 1:
 
-Input: s = ["h","e","l","l","o"]
-Output: ["o","l","l","e","h"]
-Example 2:
 
-Input: s = ["H","a","n","n","a","h"]
-Output: ["h","a","n","n","a","H"]
+**Input:** s = ["h","e","l","l","o"]
+**Output:** ["o","l","l","e","h"]
+
+### Example 2:
+
+
+**Input:** s = ["H","a","n","n","a","h"]
+**Output:** ["h","a","n","n","a","H"]
  
+
+```java
  class Solution {
     public void reverseString(char[] s) {
 
@@ -170,36 +172,44 @@ Output: ["h","a","n","n","a","H"]
         }
     }
 }
+```
 
-125. Valid Palindrome
-Solved
-Easy
-Topics
-premium lock icon
-Companies
+
+---
+
+## 125. Valid Palindrome
+
+> **Solved** | **Easy** | **Topics** | **premium lock icon** | **Companies**
+
 A phrase is a palindrome if, after converting all uppercase letters into lowercase letters and removing all non-alphanumeric characters, it reads the same forward and backward. Alphanumeric characters include letters and numbers.
 
 Given a string s, return true if it is a palindrome, or false otherwise.
 
  
 
-Example 1:
+### Example 1:
 
-Input: s = "A man, a plan, a canal: Panama"
-Output: true
-Explanation: "amanaplanacanalpanama" is a palindrome.
-Example 2:
 
-Input: s = "race a car"
-Output: false
-Explanation: "raceacar" is not a palindrome.
-Example 3:
+**Input:** s = "A man, a plan, a canal: Panama"
+**Output:** true
+**Explanation:** "amanaplanacanalpanama" is a palindrome.
 
-Input: s = " "
-Output: true
-Explanation: s is an empty string "" after removing non-alphanumeric characters.
+### Example 2:
+
+
+**Input:** s = "race a car"
+**Output:** false
+**Explanation:** "raceacar" is not a palindrome.
+
+### Example 3:
+
+
+**Input:** s = " "
+**Output:** true
+**Explanation:** s is an empty string "" after removing non-alphanumeric characters.
 Since an empty string reads the same forward and backward, it is a palindrome.
 
+```java
 class Solution {
     public boolean isPalindrome(String s) {
 
@@ -230,29 +240,34 @@ class Solution {
         return true;
     }
 }
+```
 
-771. Jewels and Stones
-Solved
-Easy
-Topics
-premium lock icon
-Companies
-Hint
+
+---
+
+## 771. Jewels and Stones
+
+> **Solved** | **Easy** | **Topics** | **premium lock icon** | **Companies** | **Hint**
+
 You're given strings jewels representing the types of stones that are jewels, and stones representing the stones you have. Each character in stones is a type of stone you have. You want to know how many of the stones you have are also jewels.
 
 Letters are case sensitive, so "a" is considered a different type of stone from "A".
 
  
 
-Example 1:
+### Example 1:
 
-Input: jewels = "aA", stones = "aAAbbbb"
-Output: 3
-Example 2:
 
-Input: jewels = "z", stones = "ZZ"
-Output: 0
+**Input:** jewels = "aA", stones = "aAAbbbb"
+**Output:** 3
 
+### Example 2:
+
+
+**Input:** jewels = "z", stones = "ZZ"
+**Output:** 0
+
+```java
 class Solution {
     public int numJewelsInStones(String jewels, String stones) {
 
@@ -270,38 +285,48 @@ class Solution {
         return count;
     }
 }
+```
 
-1108. Defanging an IP Address
-Solved
-Easy
-Topics
-premium lock icon
-Companies
+
+---
+
+## 1108. Defanging an IP Address
+
+> **Solved** | **Easy** | **Topics** | **premium lock icon** | **Companies**
+
 Given a valid (IPv4) IP address, return a defanged version of that IP address.
 
 A defanged IP address replaces every period "." with "[.]".
 
  
 
-Example 1:
+### Example 1:
 
-Input: address = "1.1.1.1"
-Output: "1[.]1[.]1[.]1"
-Example 2:
 
-Input: address = "255.100.50.0"
-Output: "255[.]100[.]50[.]0"
+**Input:** address = "1.1.1.1"
+**Output:** "1[.]1[.]1[.]1"
 
+### Example 2:
+
+
+**Input:** address = "255.100.50.0"
+**Output:** "255[.]100[.]50[.]0"
+
+```java
 class Solution {
     public String defangIPaddr(String address) {
         return address.replace(".", "[.]");
     }
 }
+```
 
-StringBuilder se bhi kar sakte hain
+
+### StringBuilder se bhi kar sakte hain
+
 
 Abhi humne StringBuilder padha hai, to manually bhi:
 
+```java
 class Solution {
     public String defangIPaddr(String address) {
 
@@ -321,35 +346,43 @@ class Solution {
         return ans.toString();
     }
 }
+```
 
-58. Length of Last Word
-Solved
-Easy
-Topics
-premium lock icon
-Companies
+
+---
+
+## 58. Length of Last Word
+
+> **Solved** | **Easy** | **Topics** | **premium lock icon** | **Companies**
+
 Given a string s consisting of words and spaces, return the length of the last word in the string.
 
 A word is a maximal substring consisting of non-space characters only.
 
  
 
-Example 1:
+### Example 1:
 
-Input: s = "Hello World"
-Output: 5
-Explanation: The last word is "World" with length 5.
-Example 2:
 
-Input: s = "   fly me   to   the moon  "
-Output: 4
-Explanation: The last word is "moon" with length 4.
-Example 3:
+**Input:** s = "Hello World"
+**Output:** 5
+**Explanation:** The last word is "World" with length 5.
 
-Input: s = "luffy is still joyboy"
-Output: 6
-Explanation: The last word is "joyboy" with length 6.
+### Example 2:
 
+
+**Input:** s = "   fly me   to   the moon  "
+**Output:** 4
+**Explanation:** The last word is "moon" with length 4.
+
+### Example 3:
+
+
+**Input:** s = "luffy is still joyboy"
+**Output:** 6
+**Explanation:** The last word is "joyboy" with length 6.
+
+```java
 class Solution {
     public int lengthOfLastWord(String s) {
 
@@ -371,11 +404,15 @@ class Solution {
         return count;
     }
 }
+```
 
-trim() se bhi kar sakte hain
+
+### trim() se bhi kar sakte hain
+
 
 Ek aur simple approach:
 
+```java
 class Solution {
     public int lengthOfLastWord(String s) {
 
@@ -392,42 +429,49 @@ class Solution {
         return count;
     }
 }
+```
+
 
 Ye bhi correct hai.
 
 Lekin pehla solution extra String banane se bachata hai, isliye DSA perspective se better hai.
 
-1678. Goal Parser Interpretation
-Solved
-Easy
-Topics
-premium lock icon
-Companies
-Hint
+---
+
+## 1678. Goal Parser Interpretation
+
+> **Solved** | **Easy** | **Topics** | **premium lock icon** | **Companies** | **Hint**
+
 You own a Goal Parser that can interpret a string command. The command consists of an alphabet of "G", "()" and/or "(al)" in some order. The Goal Parser will interpret "G" as the string "G", "()" as the string "o", and "(al)" as the string "al". The interpreted strings are then concatenated in the original order.
 
 Given the string command, return the Goal Parser's interpretation of command.
 
  
 
-Example 1:
+### Example 1:
 
-Input: command = "G()(al)"
-Output: "Goal"
-Explanation: The Goal Parser interprets the command as follows:
+
+**Input:** command = "G()(al)"
+**Output:** "Goal"
+**Explanation:** The Goal Parser interprets the command as follows:
 G -> G
 () -> o
 (al) -> al
 The final concatenated result is "Goal".
-Example 2:
 
-Input: command = "G()()()()(al)"
-Output: "Gooooal"
-Example 3:
+### Example 2:
 
-Input: command = "(al)G(al)()()G"
-Output: "alGalooG"
 
+**Input:** command = "G()()()()(al)"
+**Output:** "Gooooal"
+
+### Example 3:
+
+
+**Input:** command = "(al)G(al)()()G"
+**Output:** "alGalooG"
+
+```java
 class Solution {
     public String interpret(String command) {
 
@@ -456,6 +500,7 @@ class Solution {
 }
 ```
 
+
 ### Ek alternative — replace()
 
 
@@ -470,32 +515,37 @@ class Solution {
                 .replace("(al)", "al");
     }
 }
+```
 
-1528. Shuffle String
-Solved
-Easy
-Topics
-premium lock icon
-Companies
-Hint
+
+---
+
+## 1528. Shuffle String
+
+> **Solved** | **Easy** | **Topics** | **premium lock icon** | **Companies** | **Hint**
+
 You are given a string s and an integer array indices of the same length. The string s will be shuffled such that the character at the ith position moves to indices[i] in the shuffled string.
 
 Return the shuffled string.
 
  
 
-Example 1:
+### Example 1:
 
 
-Input: s = "codeleet", indices = [4,5,6,7,0,2,1,3]
-Output: "leetcode"
-Explanation: As shown, "codeleet" becomes "leetcode" after shuffling.
-Example 2:
 
-Input: s = "abc", indices = [0,1,2]
-Output: "abc"
-Explanation: After shuffling, each character remains in its position.
+**Input:** s = "codeleet", indices = [4,5,6,7,0,2,1,3]
+**Output:** "leetcode"
+**Explanation:** As shown, "codeleet" becomes "leetcode" after shuffling.
 
+### Example 2:
+
+
+**Input:** s = "abc", indices = [0,1,2]
+**Output:** "abc"
+**Explanation:** After shuffling, each character remains in its position.
+
+```java
 class Solution {
     public String restoreString(String s, int[] indices) {
 

@@ -991,7 +991,8 @@ hello world
 
 \\s+ → one or more whitespace characters.
 
-⚠️ Abhi regex detail mein jaane ki zarurat nahi. Bas itna yaad rakho ki replaceAll() regex support karta hai.
+> **⚠️ Abhi regex detail mein jaane ki zarurat nahi. Bas itna yaad rakho ki replaceAll() regex support karta hai.**
+
 
 ## 4. trim() ⭐
 

@@ -91,9 +91,10 @@ public class Main {
 
         System.out.println(list);
     }
-```
 
 }
+```
+
 
 Output:
 
@@ -605,9 +606,10 @@ public class Main {
 
         System.out.println(list.size());
     }
-```
 
 }
+```
+
 
 Iska flow:
 
@@ -1042,9 +1044,10 @@ public class Main {
 
         System.out.println(list);
     }
-```
 
 }
+```
+
 
 Output roughly:
 
@@ -1392,7 +1395,8 @@ subList(start, end)
 
 दोनों में end exclusive.
 
-⚠️ Important: subList() original list की view होती है, independent copy नहीं।
+> **⚠️ Important: subList() original list की view होती है, independent copy नहीं।**
+
 
 Independent copy चाहिए:
 

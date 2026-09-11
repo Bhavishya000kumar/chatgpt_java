@@ -198,6 +198,7 @@ if(map.containsKey(x)) {
 }
 ```
 
+
 ## 8️⃣ containsValue()
 
 
@@ -404,9 +405,10 @@ class Main {
 
         System.out.println(marks.size());
     }
-```
 
 }
+```
+
 
 Output:
 
@@ -965,12 +967,13 @@ class Main {
         for(int x : arr) {
             freq.put(x, freq.getOrDefault(x, 0) + 1);
         }
-```
 
 
         System.out.println(freq);
     }
 }
+```
+
 
 Conceptually output:
 
@@ -1025,7 +1028,8 @@ e -> 1
 l -> 2
 o -> 1
 
-⚠️ HashMap order guaranteed nahi hota, isliye output ka order different aa sakta hai.
+> **⚠️ HashMap order guaranteed nahi hota, isliye output ka order different aa sakta hai.**
+
 
 ## 4️⃣ Kisi Element ki Frequency Directly Find Karna
 
@@ -1242,7 +1246,8 @@ frequency compare karo
         ↓
 maximum frequency wala element
 
-⚠️ Agar tie ho, answer kis element ko choose karega ye question ki exact condition par depend karega.
+> **⚠️ Agar tie ho, answer kis element ko choose karega ye question ki exact condition par depend karega.**
+
 
 ## 1️⃣1️⃣ Two Sum Pattern 🔥🔥
 
@@ -1313,7 +1318,8 @@ Then:
 
 if(map.containsKey(needed))
 
-🔥 Ye pattern future LeetCode questions mein bahut kaam aayega.
+> **🔥 Ye pattern future LeetCode questions mein bahut kaam aayega.**
+
 
 ## 1️⃣2️⃣ HashMap ka Main DSA Pattern
 
@@ -1662,6 +1668,7 @@ for(int x : set) {
     System.out.println(x);
 }
 ```
+
 
 
 ⚠️ HashSet ka order guaranteed nahi hai.
